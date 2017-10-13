@@ -1,4 +1,4 @@
-# Inteliware Web CoE
+# Intelliware Web CoE
 
 ## Labs
 
