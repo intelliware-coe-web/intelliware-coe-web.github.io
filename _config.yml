@@ -33,7 +33,7 @@ collections:
     output: true
   posts:
     output: true
-    permalink: /p/:name
+    permalink: /posts/:name
 
 # Build settings
 markdown: kramdown
