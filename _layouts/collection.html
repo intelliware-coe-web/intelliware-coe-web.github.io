@@ -2,24 +2,22 @@
 layout: default 
 ---
 <div id="collection">
-  <ul class="mdl-list">
+  <ul class="collection">
     
   {% for item in site[page.collection] %}
     {% if item.layout != "collection" %}
 
-      <li class="mdl-list__item mdl-list__item--three-line">
-      <span class="mdl-list__item-primary-content">
-        <span class="mdl-list__item-text-title">{{ item.title }}</span>
-        <span class="mdl-list__item-text-body">{{ item.description }}</span>
-      </span>
-      <span class="mdl-list__item-secondary-content">
+      <li class="collection-item avatar">
+      
+        <span class="title">{{ item.title }}</span>
+        <p>{{ item.description }}</p>
+      
         {% if item.external_url %}
         {{ external_url }}
-          <a class="mdl-list__item-secondary-action" target="_blank" href="{{ item.external_url }}"><i class="material-icons">link</i></a>
+          <a  class="secondary-content" target="_blank" href="{{ item.external_url }}"><i class="material-icons">link</i></a>
         {% else %}
-          <a class="mdl-list__item-secondary-action" href="{{ item.url }}"><i class="material-icons">visibility</i></a>
+          <a class="secondary-content" href="{{ item.url }}"><i class="material-icons">visibility</i></a>
         {% endif %}
-      </span>
     </li>
     {% endif %}
   {% endfor %}
