@@ -1,0 +1,18 @@
+--- 
+layout: default 
+---
+<div class="center-align">
+    <div style="display: inline-block;">Suggested training: 
+        {% for item in page.trainings %}
+        <span class="chip">{{item}}</span>
+        {% endfor %}
+    </div>
+    <div>Last updated: <em>{{page.lastUpdated}}</em></div>
+</div>
+
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="http://zalando.github.io/tech-radar/release/radar-0.5.js"></script>
+<svg id="radar"></svg>
+
+{{ content }}
